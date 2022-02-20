@@ -1,0 +1,36 @@
+*{
+    background-color: black;
+}
+.caja-principal{
+    display: flex;/*alinea horizontalmente*/
+    /*display: block;alinear en bloque*/
+}
+.caja-horizontal{
+    display: flex;
+}
+.caja-vertical{
+    display: flex;
+    flex-direction: column;
+     /* flex-direction: row; filas
+      flex-direction: column;  columnas*/
+}
+.caja-horizontal{
+    
+}
+.elemento-de-caja-horizontal{
+    height: 100px;
+    width: 100px;
+    background-color: teal;
+    margin:10px
+    /*margin-top: 50px; arriba
+    margin-left: 50px; izquierda
+    margin-right: 50px; derecha
+    margin-bottom: 50px;  abajo*/
+}
+.elemento-de-caja-vertical{
+    background-color: yellow;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+margin: 10px;
+}

@@ -1,0 +1,27 @@
+body{
+    background-color: black;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+   
+}
+.navbar{
+    background-color: red;
+}
+.etiqueta-logo{
+    font-size: 40px;
+    flex-grow: 5;
+}
+.primera-etiqueta{
+    flex-grow: 1;
+}
+.segunda-etiqueta{
+    flex-grow: 0.2;
+}
+.tercera-etiqueta{
+    flex-grow: 0.2;
+}
+.cuarta-etiqueta{
+    flex-grow: 0.2;
+}
