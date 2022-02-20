@@ -1,0 +1,33 @@
+.prueba{
+    color: blue;
+    border: 10px solid aquamarine;
+}
+li{
+    color: blue;
+}
+
+#btn{
+    background-color: blueviolet;
+}
+
+article , h1{
+    background-color: hotpink;
+}
+
+#btn:hover{
+    cursor: pointer;
+    background-color: darkcyan;
+    border-radius: 40px;
+}
+/*odd = para los impares*/
+tr:nth-of-type(odd){
+    background-color: green;
+}
+/*odd = para los pares*/
+tr:nth-of-type(even){
+    background-color: red;
+}
+
+ul>li>p{
+    color: green;
+}
