@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <style>
+        .oscuro{
+            background-color: steelblue;
+        }
+        .claro{
+            background-color: lightsalmon;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <!-- Para utilizar las columnas de bootstrap tenemos que añadirlas dentro de un row-->
+        <div class="row">
+                <div class="col oscuro">
+                        Mi primera columna
+                </div>
+                <div class="col claro">
+                    Mi primera columna
+            </div>
+                <div class="col oscuro">
+                Mi 2da columna
+             </div>
+                <div class="col claro">
+                    Mi 3ra columna
+             </div>
+                <div class="col oscuro">
+                    Mi 4ta columna
+            </div>
+            <div class="col claro">
+                Mi 5ta columna
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Columnas deinidas</h2>
+        <!-- Las 12 columnas se deinen en el row-->
+        <div class="row">
+
+            <div class="col-5 claro">
+                    columna1
+            </div>
+
+            <div class="col-5 oscuro">
+                columna2
+            </div>
+                <!-- Si el ancho de las columnas nO suma 12, la que se sobresalga va a colapsar : se va a disponer después de los otros elementos en la parte inerior -->
+            <div class="col-3 claro">
+                columna3
+            </div>
+
+        </div>
+
+        <hr>
+        <h2>COlumnas responsivas</h2>
+      <div class="row">     
+        
+        <div class="col-xl-12  col-md-8 col-sm-4 oscuro">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci corporis voluptatum placeat ipsum est, possimus inventore similique rem, pariatur magni voluptatibus dolorum velit ut dolorem neque officiis in reprehenderit! Recusandae?</p>
+
+        </div>
+        <div class="col-xl-6 col-md-4 col-sm-6 claro">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut expedita rem cum voluptatibus porro tempora dignissimos dolorem, dolore aliquid autem officiis voluptatum libero laborum assumenda non eligendi incidunt doloribus quo?</p>
+        </div>
+            <!-- col-xl-8  las columnas colapsarán si el ancho disponible es menor a 1200px-->
+            <!-- col-md-# las columnas colapsarán cuando sea menos de 758px de ancho -->
+            <!-- col-lg-# las columnas colapsarán cuando sea menos de 992px de ancho -->
+            <!-- col-sm-# las columnas colapsarán cuando sea menos de 576px de ancho -->
+            <hr>
+        <div class="row">
+            <div class="col-xl-7 col-lg-6 col-md-12 col-sm-12 oscuro"> 
+                noticia principal
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-8 claro">
+                noticia mediana
+            </div>
+            <div class="col-xl-2 col-lg-2 col-md-6 col-sm-4 oscuro">
+                publicidad
+            </div>
+
+        </div>
+
+    </div> 
+</body>
+</html>

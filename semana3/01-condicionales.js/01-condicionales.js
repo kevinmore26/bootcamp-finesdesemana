@@ -13,6 +13,7 @@ if(edad < 18){
     console.log("ok, eres mayor, sí puedes votar")
 }
 
+
 //50 === 50
 // tipo de dato y el contenido
 // else -- es para todos los casos sobrantes
