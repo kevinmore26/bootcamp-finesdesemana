@@ -19,7 +19,6 @@ let cuenta = numeros.map((monto,indice,array)=>{
 console.log(cuenta)
 
 //filter
-
 let peliculasBuenas = peliculas.filter((peli)=>{
         return peli.vote_average > 5
 })
