@@ -1,0 +1,39 @@
+h1{
+    background-color: aquamarine;
+    color: white;
+    font-family: arial;
+}
+
+article{
+    border: 3px solid limegreen;
+    margin: 10px;
+}
+
+main{
+    display: flex;
+}
+
+
+
+/* que sea para pantallas, y que funcione a partir de menos de 768px*/
+@media screen and (max-width:768px){
+
+    /* todo el css que ponga aquí aplicará de ese tamaño para abajo*/
+    h1{
+        background-color: rebeccapurple;
+        color: salmon;
+        font-size: 40px;
+    }
+    main{
+        display: block;
+    }
+}
+
+
+@media screen and (min-width:1024px){
+    h1{
+        background-color: red;
+        color: salmon;
+        font-size: 40px;
+    }
+}
