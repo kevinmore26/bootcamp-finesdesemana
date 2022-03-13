@@ -1,0 +1,61 @@
+:root{
+    --color-primario: #3277f6;
+    --color-secundario: #3277f6;
+    --color-terciario: #3277f6;
+    --color-bg-primario: #3277f6;
+    --color-bg-secundario: #3277f6;
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li{
+    text-decoration: none;
+    padding: 10px;
+}
+body{
+    display: flex;
+    max-width: 100vh;
+}
+.raiz{
+    width: 75%;
+}
+.raiz > nav{
+    height: 54px;
+    padding: 15px;
+    color: var(--color-bg-secundario);
+}
+.principal{
+    display: flex;
+}
+.cartas{
+    display: flex;
+}
+.imagen{
+    height: 250px;
+}
+.imagen > img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+
+}
+.menu{
+    width: 20%;
+}
+.tarjeta{
+    width: 150px;
+}
+
+#contenido{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(150px,1fr));
+    grid-template-rows: repeat(4,minmax(150px,1fr));
+    gap: 25px;
+    padding: 25px;
+
+}

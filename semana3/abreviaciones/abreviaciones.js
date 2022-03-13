@@ -6,8 +6,8 @@ a++;
 
 let b = 10;
 // es menos -1
-b--
+b--;
 
 let c = 5;
 // c = c + 2
-c =+ 2
+c = +2;

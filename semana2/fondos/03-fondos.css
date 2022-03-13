@@ -1,27 +1,26 @@
-body{
-    background-image: url(./penguin.jpeg);
- 
+body {
+  background-image: url(./penguin.jpeg);
 }
 /*body{
     background-image: url(./penguin.jpeg);
     background-size: 200px;
     background-repeat: no-repeat;
 }*/
-.card{
-    width: 400px;
-    height:600px;
-    background-image: url(./antartica.jpg);
-    background-size: cover;
-    background-position: left;
-    border: 5px solid red;
-    border-radius: 10px 60px 40px 80px;
+.card {
+  width: 400px;
+  height: 600px;
+  background-image: url(./antartica.jpg);
+  background-size: cover;
+  background-position: left;
+  border: 5px solid red;
+  border-radius: 10px 60px 40px 80px;
 }
 
-.circulo{
-    width: 400px;
-    height: 400px;
-    border: 3px solido darkblue;
-    border-radius: 50%;
-   
-    box-shadow: -20px 20px 20px skyblue;
+.circulo {
+  width: 400px;
+  height: 400px;
+  border: 3px solido darkblue;
+  border-radius: 50%;
+
+  box-shadow: -20px 20px 20px skyblue;
 }
