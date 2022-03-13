@@ -66,7 +66,7 @@ let dibujarTarjetas = () => {
   listaPlatillos.forEach((plato) => {
     htmlTarjetas =htmlTarjetas +
       `
-        <div class="tarjeta">
+        <div class="tarjeta" >
             <div class="imagen"> 
                 <img src="${plato.imagen}">      
             <div/>
@@ -75,7 +75,7 @@ let dibujarTarjetas = () => {
                 <p>${plato.descripcion}<p/>
             <div/>
         <div/>`;
-        
+
         divContenido.innerHTML = htmlTarjetas
   });
 };
