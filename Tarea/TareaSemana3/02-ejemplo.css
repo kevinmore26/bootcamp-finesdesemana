@@ -1,0 +1,357 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  /* border:1px solid gray; */
+}
+
+/* variables */
+:root{
+  --color-primario:#FB8F1D;
+  --color-secundario:#1ABE84;
+  --color-dark: #AFB0B9;
+  --color-darl-bold: #7D7987;
+}
+
+nav{
+  font-family: 'Lato', sans-serif;
+  display:flex;
+  justify-content: space-between;
+  margin-top:20px;
+}
+
+/* todos los img dentro de nav */
+nav img{
+  max-width: 40px;
+}
+
+.container{
+  max-width:900px;
+  margin:0 auto;
+}
+
+nav ul{
+  display:flex;
+  align-items: center;
+}
+
+nav li{
+  list-style: none;
+  /* margin:arribaabajo costados */
+  margin:0 20px;
+  cursor:pointer;
+}
+/* del nav el elemento de tipo li numero 4 */
+nav li:nth-of-type(4){
+  margin-right: 5px;
+}
+
+nav li:nth-of-type(5){
+  margin-left: 5px;
+}
+
+.li__disabled {
+  color: var(--color-dark) !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+button{
+  outline:none;
+}
+
+.btn-register{
+  background-color: var(--color-primario);
+  color:white;
+  padding:8px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius:5px;
+  border:1px solid var(--color-primario);
+}
+
+.btn-login{
+  background-color: white;
+  color:var(--color-primario);
+  padding:8px;
+  padding-right: 30px;
+  padding-left: 30px;
+  border-radius:5px;
+  border:1px solid var(--color-primario);
+}
+
+.width-40 {
+  width: 40% !important;
+}
+
+/* agregando RWD al menú */
+
+#check{
+  /* el check se esconde */
+  position:absolute;
+  visibility: hidden;
+  z-index:-99;
+}
+
+.menu{
+  transition: 0.5s;
+}
+
+.show-menu-btn, .hide-menu-btn{
+  cursor:pointer;
+  font-size:30px;
+  display:none;
+}
+
+/* header */
+header{
+  display:flex;
+}
+
+/* izquierda: header-content */
+.header-content{
+  width:45%;
+  padding:30px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+/* una buena práctica es definir las propiedad comunes para varios elementos ej.
+h1,h2,h3,h4,h5,h6 {font-family: 'Lato';} */
+
+h1 {
+  font-size: 64px;
+  /* font-weight:bold; */
+}
+
+h2 {
+  font-size: 36px;
+}
+
+label {
+  font-family: 'Lato', sans-serif;
+}
+
+.header-content input{
+  padding:15px;
+  border-radius: 5px;
+}
+
+#btn-search{
+  background-color: var(--color-primario);
+  padding:12px;
+  color:white;
+  width:40%;
+  min-width:150px;
+  border-radius:10px;
+  font-family: 'Lato', sans-serif;
+}
+
+/* derecha: header-img */
+.header-img{
+  width:55%;
+  padding:30px;
+}
+
+.header-img > img{
+  max-width:100%;
+}
+
+.input-search {
+  border: 1px solid var(--color-dark);
+}
+
+.section-container {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-container div {
+  padding: 30px;
+}
+
+.section-p {
+  font-size: 17px;
+  color: var(--color-darl-bold);
+  font-family: 'Lato', sans-serif;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.mb-150 {
+  margin-bottom: 150px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mt-120 {
+  margin-top: 120px;
+}
+
+.section-title-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-link {
+  color: var(--color-primario);
+  text-decoration: none;
+  font-family: 'Lato', sans-serif;
+}
+
+.section-cards {
+  display: flex;
+  margin-top: 50px;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+}
+
+.card:nth-child(2) {
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.card:nth-child(3) {
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+.place {
+  background-color: #fff;
+  bottom: 4px;
+  border-top-right-radius: 8px;
+  font-family: 'Lato', sans-serif;
+  padding: 10px;
+  position: absolute;
+}
+
+.place p {
+  color: var(--color-dark)
+}
+
+.img-card {
+  height: 337px;
+  border-radius: 8px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.start-checked {
+  color: #FFBB0C;
+}
+
+h4 {
+  font-size: 22px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+.sub-title {
+  font-family: 'Lato', sans-serif;
+  font-size: 18px;
+}
+
+.img-card-trending {
+  width: 100%;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+  height: 200px;
+}
+
+.card-title {
+  font-family: 'Lato', sans-serif;
+  margin-top: 10px;
+  font-size: 19px;
+}
+
+.card-subtitle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 15px;
+  color: var(--color-dark);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #F9F9FB;
+}
+
+.footer div {
+  padding: 35px;
+  width: 16%;
+}
+
+@media screen and (max-width:768px){
+
+  /* menu */
+  .menu{
+    position:fixed;
+    background-color:var(--color-secundario);
+    width:100%;
+    height:100vh;
+    top:0;
+    right: -100%;/*esto me va a servir para esconder mi menú*/
+    text-align:center;
+    /* padding: arribayabajo costados */
+    padding:100px 0;
+    z-index:20;
+    /* ya es flex, solamente cambiamos la dirección */
+    flex-direction: column;
+  }
+
+  .menu li{
+    padding:20px;
+    font-size:26px;
+  }
+
+  .btn-login, .btn-register{
+    font-size:26px;
+  }
+
+  .hide-menu-btn{
+    position:absolute;
+    top:50px;
+    right:50px;
+  }
+
+  .show-menu-btn, .hide-menu-btn{
+    display:block;
+    padding-right:10px;
+  }
+  /* la pseudoclase checked hace referencia si mi checkbox esta activado */
+  /* ~ este símbolo/selector hace referencia a los elementos que esten después de #check en la estructura, en este caso menu */
+  #check:checked ~ .menu{
+    right:0;
+  }
+
+  /* header */
+  header{
+    flex-direction: column;
+    align-items:center
+  }
+
+  .header-content{
+    min-height: 300px;
+  }
+}
