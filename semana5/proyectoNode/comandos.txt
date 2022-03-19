@@ -1,0 +1,12 @@
+npm init
+- inicializa un proyecto donde tú manualmente tienes que hacer la configuración
+
+npm init -y 
+-inicializa el proyecto pero con una configuración automática
+
+npm install "nombre_libreria"
+-instalar una libreria 
+
+
+npm install 
+-instalo las librerias que se encuentran en el package json (registro de tu proyecto)
