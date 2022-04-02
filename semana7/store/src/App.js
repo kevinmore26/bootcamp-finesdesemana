@@ -4,7 +4,7 @@ import PortadaView from './views/PortadaView'
 import ProductoView from './views/ProductoView'
 import NavTop from './components/NavTop'
 import CarritoContextProvider from "./context/carritoContext"
-
+import CarritoView from "./views/CarritoView"
 export default function App(){
 
   
@@ -19,6 +19,7 @@ export default function App(){
                 <Routes>  
                   <Route exact path="/"  element={<PortadaView/>}  /> 
                   <Route exact path="/detalle/:id"  element={<ProductoView/>}  />   
+                  <Route exact path="/carrito"  element={<CarritoView/>}  />   
                 </Routes>
               </CarritoContextProvider>
           </BrowserRouter>

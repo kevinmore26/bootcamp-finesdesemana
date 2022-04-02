@@ -7,13 +7,16 @@ const CarritoContextProvider = (props) =>{
     const [carrito,setCarrito] = useState([])
 
     const anadirACarrito = (producto) =>{
-        setCarrito([...carrito, producto])
+
+
+        
+        setCarrito([...carrito, {...producto, cantidad:1}])
     }
 
     return(
-        <CarritoContextProvider value={{carrito,anadirACarrito}}>
+        <CarritoContext.Provider value={{carrito,anadirACarrito}}>
                     {props.children}
-        </CarritoContextProvider>
+        </CarritoContext.Provider>
     )
 
 }
