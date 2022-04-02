@@ -1,6 +1,7 @@
 
 import { useParams } from "react-router-dom"
-import { useState,useEffect } from "react"
+import { useState,useEffect,useContext } from "react"
+import { CarritoContext } from "../context/carritoContext"
 import { obtenerProductoPorId } from "../services/productosService"
 import Loading from "../components/Loading"
 //el useParams de react router sirve para obtener acceso a los datos de tu URL para una ruta
@@ -9,6 +10,8 @@ export default function ProductoView(){
 
     const [producto,setProducto] = useState([])
     const [cargando,setCargando] = useState(true)
+    const {anadirACarrito} = useContext(CarritoContext)
+    
 
     const {id} = useParams()
 
@@ -23,6 +26,11 @@ export default function ProductoView(){
                 console.log('error')
         }
     }
+
+    const anadirACarritoContext =()=>{
+        anadirACarrito(producto)
+    }
+
 
     useEffect(()=>{
         getProducto()
@@ -52,6 +60,11 @@ export default function ProductoView(){
                                     S/ {producto.prod_precio}
                                 </span>
 
+                                <button className="btn btn-dark btn-lg"
+                                onClick={anadirACarritoContext}  >
+                                <i className="fas fa-shopping-cart"></i>
+                                        Añadir al carrito
+                                </button>
                                
                                    
                             </div>
