@@ -4,6 +4,8 @@ import { useState,useEffect,useContext } from "react"
 import { CarritoContext } from "../context/carritoContext"
 import { obtenerProductoPorId } from "../services/productosService"
 import Loading from "../components/Loading"
+import Swal from 'sweetalert2'
+import { useNavigate } from 'react-router-dom';
 //el useParams de react router sirve para obtener acceso a los datos de tu URL para una ruta
 //gracias al useParams me permitirá devolver el ID
 export default function ProductoView(){
@@ -11,7 +13,7 @@ export default function ProductoView(){
     const [producto,setProducto] = useState([])
     const [cargando,setCargando] = useState(true)
     const {anadirACarrito} = useContext(CarritoContext)
-    
+    const navigate = useNavigate()
 
     const {id} = useParams()
 
@@ -28,8 +30,31 @@ export default function ProductoView(){
     }
 
     const anadirACarritoContext =()=>{
+        
         anadirACarrito(producto)
-    }
+        const resultado = Swal.fire({
+            icon:'success',
+            title:'Producto añadido',
+            showConfirmButton:true,
+            showDenyButton:true,
+            confirmButtonText:'Seguir comprando' ,
+            denyButtonText:'Ir a carrito'
+        })
+
+        .then((resultado) => {
+        
+        if(resultado.isConfirmed){
+            console.log('isconfirmed')
+           navigate('/')
+        }else if(resultado.isDenied){
+            console.log('isDenied')
+            navigate('/carrito')
+      }
+})
+
+
+
+}
 
 
     useEffect(()=>{

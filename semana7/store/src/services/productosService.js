@@ -26,6 +26,7 @@ const obtenerProductoPorId = async (id) =>{
     }
 
 }
+
 export{
     obtenerProductoPorId,
     obtenerProductos

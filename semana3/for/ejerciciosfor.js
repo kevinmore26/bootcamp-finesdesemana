@@ -4,8 +4,6 @@ let notas = [15,17,20,14,18,14,11,19]
 
 //con un for vamos imprimir cada alumno con su respectica nota
 
-
-
 //ejercicios
 //utilizando el mismo arreglo alumno, hacer que el usuario ingrese un nombre, y si lo encuentra debe mostrar la posicion donde se encuentra el alumno, mostrar un mensaje de que no se encontró
 
