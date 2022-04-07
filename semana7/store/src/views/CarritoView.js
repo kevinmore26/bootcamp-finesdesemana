@@ -6,7 +6,7 @@ export default function CarritoView (){
     const {carrito} = useContext(CarritoContext)
     console.log(carrito)
     return(
-        <div>
+        <div className="container">
                 <div className="container">
                     <div className='my-4 text-center'>
                         <h1>
