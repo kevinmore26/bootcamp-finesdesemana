@@ -1,7 +1,14 @@
 .App {
   text-align: center;
+  background-color: black;
 }
 
+.fondoPortada{
+  background-color:#F8F9FA ;
+}
+.fondoNavtop{
+  background-color: #EBEBEB;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

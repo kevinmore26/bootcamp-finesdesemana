@@ -1,12 +1,12 @@
 import {useContext} from 'react'
 import {CarritoContext} from '../context/carritoContext'
-
+import '../App.css'
 export default function CarritoView (){
 
     const {carrito} = useContext(CarritoContext)
     console.log(carrito)
     return(
-        <div className="container">
+        <div className="container fondoPortada">
                 <div className="container">
                     <div className='my-4 text-center'>
                         <h1>

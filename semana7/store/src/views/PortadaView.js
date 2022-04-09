@@ -2,6 +2,8 @@ import {useState, useEffect } from 'react'
 import { obtenerProductos } from '../services/productosService'
 import GroupProducts from '../components/GroupProducts'
 import CustomCarousel from '../components/CustomCarousel'
+import '../App.css'
+import '../index.css'
 //import Prueba from '../components/Prueba'
 export default function PortadaView(){
     const [productos, setProductos ] = useState([])
@@ -22,7 +24,7 @@ export default function PortadaView(){
     // el [] sirve para que no sea un bucle 
     // PROPS :{ productos, alimentos} < Prueba/>
     return(
-            <div>
+            <div className='fondoPortada' >
                 <CustomCarousel/>
                     <GroupProducts  productos={productos}/>
                   

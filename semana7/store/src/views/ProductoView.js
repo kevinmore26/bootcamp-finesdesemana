@@ -8,6 +8,7 @@ import Swal from 'sweetalert2'
 import { useNavigate } from 'react-router-dom';
 //el useParams de react router sirve para obtener acceso a los datos de tu URL para una ruta
 //gracias al useParams me permitirá devolver el ID
+import '../App.css'
 export default function ProductoView(){
 
     const [producto,setProducto] = useState([])
@@ -63,7 +64,7 @@ export default function ProductoView(){
     // va ser una función que se va a ejecutar en el montaje, y para que se cargue una vez es el []
 
     return (
-        <div>
+        <div  className='fondoPortada' >
            {cargando ? 
            (<Loading />) : 
            (<div>

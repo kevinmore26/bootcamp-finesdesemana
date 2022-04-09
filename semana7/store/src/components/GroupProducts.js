@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import '../App.css'
 
 export default function GroupProducts({ productos }) {
     console.log(productos)
 
     return (
-        <div>
+        <div >
             <div className='container'>
                 <div className='row mt-3'>
 
