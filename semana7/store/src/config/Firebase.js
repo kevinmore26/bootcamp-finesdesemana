@@ -12,6 +12,10 @@ const config = {
   appId: process.env.REACT_APP_APP_ID
 }
 
+const fire = firebase.initializeApp(config)
+const storage = firebase.storage()
+const auth = firebase.auth()
+
 export{
     fire,
     storage,
