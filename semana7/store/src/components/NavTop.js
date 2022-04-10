@@ -21,9 +21,13 @@ export default function NavTop() {
             <Link to="/productos" className="nav-link">
               Productos
             </Link>
+            
 
             
           </Nav>
+          <Link to="/login" className="nav-link">
+              Ingresar
+          </Link>
           <Link to="/carrito" className="nav-link">
               <Badge badgeContent={carrito.length} color="primary" >
                 <ShoppingCartIcon style={{color:'grey'}} />

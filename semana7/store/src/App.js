@@ -8,6 +8,8 @@ import CarritoView from "./views/CarritoView"
 import Prueba from "./components/Prueba"
 import ProductosView from "./views/ProductosView"
 import { AuthContextProvider } from "./context/authContext"
+import LoginView from "./views/LoginView"
+
 export default function App(){
 
   return(
@@ -18,7 +20,8 @@ export default function App(){
           <CarritoContextProvider>
             <NavTop/>
               {/* el Routes va verificar qué ruta necesitamos y que componente usar */}
-                <Routes>  
+                <Routes> 
+                <Route exact path="/login"  element={<LoginView/>}  />  
                   <Route exact path="/"  element={<PortadaView/>}  /> 
                   <Route exact path="/prueba"  element={<Prueba/>}  /> 
                   <Route exact path="/detalle/:id"  element={<ProductoView/>}  />  
