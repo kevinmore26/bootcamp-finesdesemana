@@ -12,11 +12,27 @@ export const AuthContextProvider = (props) =>{
 
     const signIn = async () =>{
         const rpta= await auth.signInWithPopup(proveedorGoogle)
+        console.log("soy googleeeeeeeeeeeeee",rpta)
+    }
+
+    const signOut = ()=>{
+        auth.signOut()
     }
     
+    useEffect(()=>{
+        return auth.onAuthStateChanged((user)=>{
+            setUserState(user)
+            setAuthPending(false)
+        })
+    })
     
+    
+    if(authPending){
+            return <Loading/>
+    }
+
     return(
-        <AuthContext.Provider value={{signIn}}>
+        <AuthContext.Provider value={{signIn,signOut,userState}}>
                 {props.children}
         </AuthContext.Provider>
     )
