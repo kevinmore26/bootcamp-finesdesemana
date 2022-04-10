@@ -8,6 +8,8 @@ import CarritoView from "./views/CarritoView"
 import Prueba from "./components/Prueba"
 import { AuthContextProvider } from "./context/authContext";
 import LoginView from './views/LoginView'
+import ProductosView from './views/ProductosView'
+
 
 export default function App(){
 
@@ -22,7 +24,8 @@ export default function App(){
                 <Routes>  
                   <Route exact path="/"  element={<PortadaView/>}  /> 
                   <Route exact path="/prueba"  element={<Prueba/>}  /> 
-                  <Route exact path="/detalle/:id"  element={<ProductoView/>}  />   
+                  <Route exact path="/detalle/:id"  element={<ProductoView/>}  />  
+                  <Route exact path="/productos"  element={<ProductosView/>}  />   
                   <Route exact path="/carrito"  element={<CarritoView/>}  /> 
                   <Route exact path="/login"  element={<LoginView/>}  /> 
                   
