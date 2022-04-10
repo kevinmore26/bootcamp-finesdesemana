@@ -7,12 +7,14 @@ import CarritoContextProvider from "./context/carritoContext"
 import CarritoView from "./views/CarritoView"
 import Prueba from "./components/Prueba"
 import ProductosView from "./views/ProductosView"
+import { AuthContextProvider } from "./context/authContext"
 export default function App(){
 
   return(
       <div>
         {/* este BrowserRouter vendría ser el react-router-dom */}
           <BrowserRouter>
+          <AuthContextProvider>
           <CarritoContextProvider>
             <NavTop/>
               {/* el Routes va verificar qué ruta necesitamos y que componente usar */}
@@ -24,6 +26,7 @@ export default function App(){
                   <Route exact path="/carrito"  element={<CarritoView/>}  />   
                 </Routes>
               </CarritoContextProvider>
+              </AuthContextProvider>
           </BrowserRouter>
       </div>
   )
