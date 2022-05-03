@@ -1,32 +1,14 @@
-//GET
-const obtenerMascotas = ()=>{
-    //GET
-    fetch("https://622e09a98d943bae348cff73.mockapi.io/mascotas")
-
-    .then((respuesta)=>{
-        //info acerca de la petición
-        console.log(respuesta)
-        return respuesta.json()
-    })
-    .then((datos) =>{
-        //desempaco mis datos
-        console.log(datos)
-    })
-    .catch((error) =>{
-        console(error)
-    })
-}
-
-obtenerMascotas()
+ 
 
 
 //POST
 
 const crearMascota = ()=>{
-    const nuevaMascota = {
-        nombre:"juanito",
-        edad : 3,
-        color : "blanco"
+    const nuevoProducto = {
+        prod_nombre:"juanito",
+        prod_stock : 3,
+        prod_descripcion : "está rico",
+        prod_imagen:"http://placeimg.com/640/480/fashion"
     }
     const cabecera = {
         method:'POST', //PUT, DELETE
@@ -34,11 +16,11 @@ const crearMascota = ()=>{
             //para que la API sepa cómo procesarlo
             'Content-type':'application/json'
         },
-        body:JSON.stringify(nuevaMascota)
+        body:JSON.stringify(nuevoProducto)
 
     }
     // fetch(url,configuracion)
-    fetch("https://622e09a98d943bae348cff73.mockapi.io/mascotas",cabecera)
+    fetch("https://6104aae64b92a000171c5ca7.mockapi.io/Productos",cabecera)
 
     .then((respuesta)=>{
         //info del response
@@ -59,34 +41,4 @@ const crearMascota = ()=>{
 crearMascota()
 
 //ACTUALIZAR
-
-const actualizarMascota = (id)=>{
-    //pongo los campos que tenga en mi api, solo los campos que quiero modificar o actualizar
-    const mascotaMoficada ={
-        nombre:"pepito",
-
-    }
-    const configuracion ={
-        method:'PUT',
-        headers:{
-            //para que la API sepa cómo procesarlo
-            'Content-type':'application/json'
-        },
-
-        body:JSON.stringify(mascotaMoficada)
-    }
-
-    fetch(`https://622e09a98d943bae348cff73.mockapi.io/mascotas/${id}`,configuracion)
-    .then((respuesta)=>{
-        console.log(respuesta)
-        return respuesta.json()
-    })
-    .then((mascotaActualizada)=>{
-        console.log(mascotaActualizada)
-    })
-    .catch((err)=>{
-        console.log(err)
-    })
-}
-
-actualizarMascota(50)
+ 

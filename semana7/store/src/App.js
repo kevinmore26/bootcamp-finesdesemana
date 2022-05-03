@@ -1,5 +1,4 @@
 import { BrowserRouter , Routes ,Route} from "react-router-dom"
-//import  Rutas from "./Rutas"
 import PortadaView from './views/PortadaView'
 import ProductoView from './views/ProductoView'
 import NavTop from './components/NavTop'
@@ -9,6 +8,7 @@ import Prueba from "./components/Prueba"
 import ProductosView from "./views/ProductosView"
 import { AuthContextProvider } from "./context/authContext"
 import LoginView from "./views/LoginView"
+import CrearProductoView from "./views/CrearProductoView"
 
 export default function App(){
 
@@ -24,6 +24,7 @@ export default function App(){
                 <Route exact path="/login"  element={<LoginView/>}  />  
                   <Route exact path="/"  element={<PortadaView/>}  /> 
                   <Route exact path="/prueba"  element={<Prueba/>}  /> 
+                  <Route exact path="/crear"  element={<CrearProductoView/>}  /> 
                   <Route exact path="/detalle/:id"  element={<ProductoView/>}  />  
                   <Route exact path="/productos"  element={<ProductosView/>}  />   
                   <Route exact path="/carrito"  element={<CarritoView/>}  />   

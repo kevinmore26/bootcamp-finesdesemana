@@ -14,10 +14,27 @@ const obtenerProductos = async (busqueda = "") =>{
         let {data} = await axios.get(`${URL}?search=${busqueda}`)
         return data 
     }catch{
+        
                 console.log('error')
             //si hay errores captura ese error
     }
 }
+
+ 
+
+const crearProducto = async (nuevoProducto) => {
+    try {
+        const headers = {
+            "Content-Type": "application/json"
+        }
+        //.post(URL, DATA, HEADERS)
+        let { data } = await axios.post(URL, nuevoProducto, { headers })
+        return data
+    } catch (error) {
+        throw error
+    }
+}
+
 
 const obtenerProductoPorId = async (id) =>{
     try{    
@@ -26,12 +43,12 @@ const obtenerProductoPorId = async (id) =>{
     }catch{
         console.log('error')
     }
-
 }
 
 export{
     obtenerProductoPorId,
-    obtenerProductos
-
+    obtenerProductos,
+    crearProducto,
+  
 }
 
