@@ -25,7 +25,7 @@ export default function PortadaView(){
     // PROPS :{ productos, alimentos} < Prueba/>
     return(
             <div className='fondoPortada' >
-                        <CustomCarousel/>
+                       
                                 <GroupProducts  productos={productos}/>
                   
             </div>

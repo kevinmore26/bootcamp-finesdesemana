@@ -1,43 +1,39 @@
-import {useState,useEffect,createContext} from 'react'
-import { fire, auth,firebase} from '../config/Firebase'
-import Loading from '../components/Loading'
+import { useState, useEffect, createContext } from "react";
+import { fire, auth, firebase } from "../config/Firebase";
+import Loading from "../components/Loading";
 
-const proveedorGoogle = new firebase.auth.GoogleAuthProvider()
+const proveedorGoogle = new firebase.auth.GoogleAuthProvider();
 
-export const AuthContext = createContext()
+export const AuthContext = createContext();
 
-export const AuthContextProvider = (props) =>{
-    const [userState,setUserState] = useState(null)
-    const[authPending,setAuthPending] = useState(true)
+export const AuthContextProvider = (props) => {
+  const [userState, setUserState] = useState(null);
+  const [authPending, setAuthPending] = useState(true);
 
-    const signIn = async () =>{
-        const rpta= await auth.signInWithPopup(proveedorGoogle)
-        console.log("soy googleeeeeeeeeeeeee",rpta)
-    }
+  const signIn = async () => {
+    const rpta = await auth.signInWithPopup(proveedorGoogle);
+    console.log("soy googleeeeeeeeeeeeee", rpta);
+  };
 
-    const signOut = ()=>{
-        auth.signOut()
-    }
-    
-    useEffect(()=>{
-        return auth.onAuthStateChanged((user)=>{
-            setUserState(user)
-            setAuthPending(false)
-        })
-    })
-    
-    
-    if(authPending){
-            return <Loading/>
-    }
+  const signOut = () => {
+    auth.signOut();
+  };
 
-    return(
-        <AuthContext.Provider value={{signIn,signOut,userState}}>
-                {props.children}
-        </AuthContext.Provider>
-    )
-}
-export default AuthContextProvider
+  useEffect(() => {
+    return auth.onAuthStateChanged((user) => {
+      setUserState(user);
+      setAuthPending(false);
+    });
+  });
 
+  if (authPending) {
+    return <Loading />;
+  }
 
-
+  return (
+    <AuthContext.Provider value={{ signIn, signOut, userState }}>
+      {props.children}
+    </AuthContext.Provider>
+  );
+};
+export default AuthContextProvider;

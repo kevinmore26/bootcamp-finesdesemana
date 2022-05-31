@@ -14,6 +14,7 @@ export default function ProductoView(){
     const [producto,setProducto] = useState([])
     const [cargando,setCargando] = useState(true)
     const {anadirACarrito} = useContext(CarritoContext)
+    
     const navigate = useNavigate()
 
     const {id} = useParams()
