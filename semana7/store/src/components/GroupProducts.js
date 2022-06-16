@@ -18,7 +18,7 @@ export default function GroupProducts({ productos }) {
                                         alt={prod.prod_imagen}
                                         className="card-img-top" />
                                 </div>
-                                </Link>
+                            </Link>
                             <div className='card-body'>
                                 <h6 className='card-title'>
                                     {prod.prod_nombre}
