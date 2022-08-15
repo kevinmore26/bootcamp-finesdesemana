@@ -6,7 +6,6 @@ import { useContext } from "react";
 import { CarritoContext } from "../context/carritoContext";
 import { AuthContext } from "../context/authContext";
 
-
 import "../App.css";
 export default function NavTop() {
   const { carrito } = useContext(CarritoContext);
